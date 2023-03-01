@@ -5,6 +5,8 @@
 }
 
 .productWrapper{
+  align-items: center;
+  margin-top: 36px;
   display: flex;
   justify-content: space-between;
   list-style-type: circle;
@@ -21,6 +23,7 @@
 
   h3{
     font-size: 24px;
+    text-decoration: underline;
   }
 }
 

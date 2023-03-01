@@ -38,7 +38,7 @@ export default function TitleRow(){
           shoplists.map((list) => (
             <li key={list.id} className={styles.rowWrapper}>
               <div>
-                <h2>Título da lista</h2>
+                <h2>{list.name}</h2>
                 <p>{list.description}</p>
                 <div>
                   {list.products.map((product, index) => (
