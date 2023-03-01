@@ -1,0 +1,33 @@
+.productList{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.productWrapper{
+  display: flex;
+  justify-content: space-between;
+  list-style-type: circle;
+
+  svg{
+    cursor: pointer;
+  }
+}
+
+.productInfo{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  h3{
+    font-size: 24px;
+  }
+}
+
+.productTitle{
+  align-items: baseline;
+  display: flex;
+  gap: 16px;
+
+
+}

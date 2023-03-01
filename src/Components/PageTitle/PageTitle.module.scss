@@ -1,4 +1,39 @@
+.wrapper{
+  display: flex;
+}
+
+.pageTitleWrapper{
+  align-items: center;
+  background-color: #FFF;
+  border: solid 1px #cccccc;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  display: flex;
+  height: 64px;
+  padding-left: 16px;
+  width: 50%;
+}
+
 .pageTitle{
+  color: #f16100;
   font-size: 40px;
-  text-align: center;
+}
+
+.optionsWrapper{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.newListButton{
+  background-color: #f16100;
+  border: none;
+  border-radius: 32px;
+  cursor: pointer;
+  height: 32px;
+  width: 128px;
+  &:hover{
+    background-color: #cf5300;
+  }
 }
