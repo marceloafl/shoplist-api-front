@@ -40,6 +40,10 @@ export default function TitleRow(){
               <div>
                 <h2>{list.name}</h2>
                 <p>{list.description}</p>
+                <div className={styles.listOptionsWrapper}>
+                  <button className={styles.editList}>Editar lista</button>
+                  <button className={styles.deleteList}>Deletar lista</button>
+                </div>
                 <div>
                   {list.products.map((product, index) => (
                     <Product key={index} product={product}></Product>
