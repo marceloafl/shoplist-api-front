@@ -10,7 +10,7 @@ interface Shoplists {
   products: []
 }
 
-export default function TitleRow(){
+export default function ListRow(){
 
   const [shoplists, setShoplists] = useState<Array<Shoplists>>([]);
 
