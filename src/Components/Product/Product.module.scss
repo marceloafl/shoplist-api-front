@@ -6,10 +6,11 @@
 
 .productWrapper{
   align-items: center;
-  margin-top: 36px;
+  border-bottom: solid 1px #ccc;
   display: flex;
   justify-content: space-between;
   list-style-type: circle;
+  padding: 32px 0 32px;
 
   svg{
     cursor: pointer;
