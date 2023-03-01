@@ -27,9 +27,7 @@ export default function TitleRow(){
 
   useEffect(() => {
     getShopLists();
-  }, [])
-
-  const opened = true;
+  }, []);
 
   return(
       <section>

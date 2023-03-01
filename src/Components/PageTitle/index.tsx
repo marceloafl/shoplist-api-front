@@ -2,6 +2,8 @@ import styles from './PageTitle.module.scss';
 
 export default function PageTitle(){
 
+
+
   return(
     <div className={styles.wrapper}>
       <div className={styles.pageTitleWrapper}>
