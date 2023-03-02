@@ -11,6 +11,20 @@
   }
 }
 
+.modalWrapperInactive{
+  display: none;
+}
+
+.modalHeaderWrapper{
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputCloseIcon{
+  cursor: pointer;
+}
+
 .inputWrapper{
   display: flex;
   flex-direction: column;
@@ -32,6 +46,3 @@
   }
 }
 
-.modalWrapperInactive{
-  display: none;
-}

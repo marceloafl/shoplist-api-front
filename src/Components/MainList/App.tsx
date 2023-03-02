@@ -8,8 +8,8 @@ function MainList() {
   return (
     <div className={styles.mainList}>
       <ListHeader />
-      <ListRow />
       <Newlist />
+      <ListRow />
     </div>
   );
 }

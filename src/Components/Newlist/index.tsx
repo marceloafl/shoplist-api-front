@@ -1,12 +1,28 @@
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import styles from './Newlist.module.scss';
+import { GrClose } from 'react-icons/gr';
+import { handleModal } from '../store/reducers/newShoplistOpened';
 
-let isActive: boolean = false;
+interface RootState {
+  newShoplistOpened: boolean
+}
 
 export default function Newlist(){
 
+  const newShoplistOpened = useSelector((state: RootState) => state.newShoplistOpened)
+
+  const dispatch = useDispatch();
+  function closeNewlist(){
+    dispatch(handleModal());
+  }
+
   return(
-    <section className={isActive ? `${styles.modalWrapper}` : `${styles.modalWrapperInactive}`}>
-      <h4>Insira os dados da nova lista</h4>
+    <section className={newShoplistOpened ? `${styles.modalWrapper}` : `${styles.modalWrapperInactive}`}>
+      <div className={styles.modalHeaderWrapper}>
+        <h4>Insira os dados da nova lista</h4>
+        <GrClose className={styles.inputCloseIcon} onClick={closeNewlist}></GrClose>
+      </div>
       <div className={styles.inputWrapper}>
         <label htmlFor="name">Nome da lista</label>
         <input type="text" name="name"/>
