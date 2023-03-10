@@ -16,7 +16,7 @@ export default function ListRow(){
 
   const getShopLists = async () => {
     try {
-      const response = await axios.get("https://localhost:7272/shoplist")
+      const response = await axios.get("https://localhost:7272/shoplist");
       
       const shoplistsResponse = response.data;
       setShoplists(shoplistsResponse);

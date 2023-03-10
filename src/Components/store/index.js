@@ -3,7 +3,7 @@ import newShoplistOpenedSlice from './reducers/newShoplistOpened';
 
 const store = configureStore({
   reducer: {
-    newShoplistOpened: newShoplistOpenedSlice
+    newShoplistOpened: newShoplistOpenedSlice,
   }
 });
 
