@@ -15,18 +15,22 @@ interface Props {
 
 export default function Product({product}: Props){
   return(
-      <section>
-        <ul className={styles.productList}>
-            <li className={styles.productWrapper}>
-              <div className={styles.productInfo}>
-                <h3>{product.name}</h3>
-                <p>Marca: {product.brand}</p>
-                <p>Descrição: {product.description}</p>
-                <p>Quantidade: {product.number}</p>
-              </div>
-              <FaTrash />
-            </li>
-        </ul>
-      </section>
+    <li className={styles.productWrapper}>
+      <div className={styles.productNumber}>
+        <p>Quantidade</p>
+        <p>{product.number}</p>
+      </div>
+      <div className={styles.productInfo}>
+        <div className={styles.productTitle}>
+          <p>{product.name}</p>
+          <p>-</p>
+          <p>{product.brand}</p>
+        </div>
+        <p>Descrição: {product.description}</p>
+      </div>
+      <div className={styles.productDelete}>
+        <FaTrash />
+      </div>
+    </li>
   )
 }

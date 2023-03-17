@@ -1,8 +1,11 @@
 .primaryButton{
-  align-items: center;
+  background-color: #ffffff;
+  border: solid 1px #999999;
+  border-radius: 8px;
   cursor: pointer;
-  display: flex;
-  height: 24px;
-  justify-content: center;
-  padding: 8px;
+  height: 32px;
+  width: 192px    ;
+  &:hover{
+    background-color: #eeeeee;
+  }
 }

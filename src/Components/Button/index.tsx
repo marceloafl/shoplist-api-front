@@ -2,7 +2,7 @@ import styles from './PrimaryButton.module.scss';
 
 interface Props {
   text: string,
-  onClick: () => void
+  onClick?: () => void
 }
 
 export default function PrimaryButton({text, onClick}: Props){

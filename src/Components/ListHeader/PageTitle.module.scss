@@ -4,53 +4,24 @@
 
 .pageTitleWrapper{
   align-items: center;
-  background-color: #f16100;
-  border: solid 1px #cccccc;
-  border-top-left-radius: 16px;
-  border-top-right-radius: 16px;
   display: flex;
   height: 64px;
-  justify-content: center;
-  width: 50%;
+  justify-content: flex-start;
+  width: 100%;
 }
 
+
 .pageTitle{
-  color: #FFF;
-  font-size: 40px;
+  font-size: 36px;
 }
 
 .optionsWrapper{
   align-items: center;
   display: flex;
-  justify-content: space-around;
-  width: 50%;
-}
-
-.newListButton{
-  background-color: #f16100;
-  border: none;
-  border-radius: 32px;
-  color: #FFF;
-  cursor: pointer;
-  height: 32px;
-  width: 40%;
-  &:hover{
-    background-color: #cf5300;
-  }
+  justify-content: space-between;
 }
 
 .hidden{
   visibility: hidden;
 }
 
-.newProductButton{
-  background-color: #fff;
-  border: solid 1px #999999;
-  border-radius: 32px;
-  cursor: pointer;
-  height: 32px;
-  width: 40%;
-  &:hover{
-    background-color: #eeeeee;
-  }
-}

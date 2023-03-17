@@ -18,8 +18,8 @@ export default function ListRow(){
     try {
       const response = await axios.get("https://localhost:7272/shoplist");
       
-      const shoplistsResponse = response.data;
-      setShoplists(shoplistsResponse);
+      const shoplistsResponse: {shoplists: Array<Shoplists>} = response.data;
+      setShoplists(shoplistsResponse.shoplists);
     } catch (error) { 
       console.log(error)
     }
@@ -35,19 +35,21 @@ export default function ListRow(){
           {shoplists.length === 0 ? <p>Carregando listas</p> :
           shoplists.map((list) => (
             <li key={list.id} className={styles.rowWrapper}>
-              <div>
-                <h2>{list.name}</h2>
-                <p>{list.description}</p>
+              <div className={styles.listHeader}>
+                <div className={styles.listHeaderText}>
+                  <h2>{list.name}</h2>
+                  <p>{list.description}</p>
+                </div>
                 <div className={styles.listOptionsWrapper}>
                   <button className={styles.editList}>Editar lista</button>
                   <button className={styles.deleteList}>Deletar lista</button>
                 </div>
-                <div>
-                  {list.products.map((product, index) => (
-                    <Product key={index} product={product}></Product>
-                    ))}
-                </div>
               </div>
+              <ul className={styles.listProducts}>
+                {list.products.map((product, index) => (
+                  <Product key={index} product={product}></Product>
+                  ))}
+              </ul>
             </li>
           ))}
         </ul>
