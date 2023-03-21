@@ -1,0 +1,13 @@
+.dangerButton{
+  background-color: #fff;
+  border: solid 1px #dc3545;
+  border-radius: 8px;
+  color: #dc3545;
+  cursor: pointer;
+  height: 32px;
+  width: 88px;
+  &:hover{
+    background-color: #dc3545;
+    color: #fff;
+  }
+}

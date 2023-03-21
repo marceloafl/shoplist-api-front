@@ -1,11 +1,16 @@
 .primaryButton{
-  background-color: #ffffff;
+  background-color: #28a745;
   border: solid 1px #999999;
   border-radius: 8px;
+  color: #fff;
   cursor: pointer;
   height: 32px;
   width: 192px    ;
   &:hover{
-    background-color: #eeeeee;
+    background-color: #1b6e2f;
   }
+}
+
+.invisible{
+  display: none;
 }

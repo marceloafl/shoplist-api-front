@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import styles from './Newlist.module.scss';
 import { GrClose } from 'react-icons/gr';
 import { handleModal } from '../store/reducers/newShoplistOpened';
-import PrimaryButton from '../Button';
+import PrimaryButton from '../Buttons/PrimaryButton';
 import axios from 'axios';
 
 interface RootState {
@@ -65,7 +65,7 @@ export default function Newlist(){
         <label htmlFor="description">Descrição da lista</label>
         <input type="text" name="description" onChange={event => getListDescription(event.target.value)}/>
       </div>
-      <PrimaryButton text={"Adicionar lista"} onClick={() => Post()}/>
+      <PrimaryButton text={"Adicionar lista"} onClick={() => Post()} visible={true}/>
       <div className={visibleSucess ? `${styles.sucessMessageWrapper}` : `${styles.inactive}`}>
         <p>Lista criada com sucesso.</p>
       </div>
