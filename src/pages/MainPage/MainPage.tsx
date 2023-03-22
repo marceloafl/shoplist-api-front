@@ -7,7 +7,6 @@ import Newlist from '../../components/Newlist';
 function MainList() {
   return (
     <div className={styles.mainList}>
-      <Header />
       <Newlist />
       <ListRow />
     </div>
