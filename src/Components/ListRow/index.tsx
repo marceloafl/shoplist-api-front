@@ -18,8 +18,10 @@ export default function ListRow(){
   const [shoplists, setShoplists] = useState<Array<Shoplists>>([]);
 
   const getShopLists = async () => {
+    const summaryAmount = 3;
+
     try {
-      const response = await axios.get("https://localhost:7272/shoplist");
+      const response = await axios.get(`https://localhost:7272/shoplist/summary/${summaryAmount}`);
       
       const shoplistsResponse: {shoplists: Array<Shoplists>} = response.data;
       setShoplists(shoplistsResponse.shoplists.reverse());
@@ -61,13 +63,13 @@ export default function ListRow(){
                   <DangerButton onClick={() => deleteShoplist(list.id)} text="Deletar lista" visible={true}/>
                 </div>
               </div>
-              {/* <ul className={styles.listProducts}>
+              <ul className={styles.listProducts}>
                 {list.products.map((product, index) => (
                   <Product key={index} product={product}></Product>
                   ))}
-                </ul> */}
+                </ul>
               <div className={styles.showMoreWrapper}>
-                <p>Ver lista completa</p>
+                {list.products.length <= 0 ? <p>Adicionar itens a essa lista</p> : <p>Ver lista completa</p>}
                 <AiOutlineArrowDown />
               </div>
             </li>

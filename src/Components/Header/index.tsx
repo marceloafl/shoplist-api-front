@@ -1,5 +1,5 @@
 import { handleModal } from '../store/reducers/newShoplistOpened';
-import styles from './PageTitle.module.scss';
+import styles from './Header.module.scss';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import PrimaryButton from '../Buttons/PrimaryButton';
@@ -8,7 +8,7 @@ interface RootState {
   newShoplistOpened: boolean
 }
 
-export default function PageTitle(){
+export default function Header(){
 
   const newShoplistVisible = useSelector((state: RootState) => state.newShoplistOpened)
 
