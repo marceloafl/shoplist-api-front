@@ -1,14 +1,14 @@
 import React from 'react';
 import styles from './MainPage.module.scss';
 import Header from '../../components/Header';
-import ListRow from '../../components/ListRow';
+import SummaryListRow from '../../components/SummaryListRow';
 import Newlist from '../../components/Newlist';
 
 function MainList() {
   return (
-    <div className={styles.mainList}>
+    <div className={styles.listPageWrapper}>
       <Newlist />
-      <ListRow />
+      <SummaryListRow />
     </div>
   );
 }

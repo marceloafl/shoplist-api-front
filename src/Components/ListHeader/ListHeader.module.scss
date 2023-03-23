@@ -1,0 +1,12 @@
+.listHeader{
+  background-color: #fff;
+  border-bottom: solid 1px #ccc;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+
+  .listHeaderText{
+    display: flex;
+    flex-direction: column;
+  }
+}

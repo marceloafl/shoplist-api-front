@@ -1,0 +1,20 @@
+.list{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.rowWrapper{
+  border: solid 1px #cccccc;
+  border-bottom: none;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-sizing: border-box;
+  
+  h2{
+    font-size: 24px;
+    font-weight: 700;
+    margin: 8px 0;
+  }
+}
+

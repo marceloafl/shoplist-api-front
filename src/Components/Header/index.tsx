@@ -3,6 +3,7 @@ import styles from './Header.module.scss';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import PrimaryButton from '../Buttons/PrimaryButton';
+import { Link } from 'react-router-dom';
 
 interface RootState {
   newShoplistOpened: boolean
@@ -21,7 +22,9 @@ export default function Header(){
   return(
     <div className={styles.wrapper}>
       <div className={styles.pageTitleWrapper}>
-        <h1 className={styles.pageTitle}>Suas listas</h1>
+        <Link to={'/'}className={styles.pageMenu}>
+          <h1>Suas listas</h1>
+        </Link>
       </div>
       <div className={styles.optionsWrapper}>
         <PrimaryButton onClick={openModal} text="Nova lista" visible={!newShoplistVisible}/>

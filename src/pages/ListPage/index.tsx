@@ -1,5 +1,10 @@
+import FullListRow from "../../components/FullListRow";
+import styles from './ListPage.module.scss';
+
 export default function ListPage(){
   return (
-    <h1>Página de lista</h1>
+    <div className={styles.listPageWrapper}>
+      <FullListRow />
+    </div>
   );
 }
